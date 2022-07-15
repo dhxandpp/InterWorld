@@ -1,23 +1,65 @@
 <!doctype html>
 <html>
-  <head>
-    <title>纪念•永远的柳老师</title>
-    <meta charset="utf-8">
-  </head>
-  <body>
-    <h1>柳老师哲言生成器(Beta)</h1>
-    <h2>“……最后，不管是基础中等的，还是差的，你们都要记住，还有一年半的时间，基础一定可以赶上来的！……还有，考试的时候，不要抄，没用的。不要想着去用抄的方法，改变那几分……咬定青山不放松……最后，祝考好！……（掌声）”</h2>
-    <button onclick="generate()">点我</button>
-    <p id="words">点它⬆️</p>
-    <h1>水平千古 无上光荣！</h1>
-	  <h3>须知</h3>
-	  <br>
-	  <p>谨以此网站，献给工作室里日日夜夜辛勤劳作的柳校长，纪念一段在我们物理学习生涯中不可磨灭的记忆</p>
-    <p color="red">beta版本非最终版本</p>
-  </body>
-  <script>
-		function generate() {
-      document.getElementById("words").innerHTML="你们差滴很";
+
+<head>
+  <title>纪念•永远的柳老师</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <h1>柳老师哲言生成器(Beta)</h1>
+  <h2>“……最后，不管是基础中等的，还是差的，你们都要记住，还有一年半的时间，基础一定可以赶上来的！……还有，考试的时候，不要抄，没用的。不要想着去用抄的方法，改变那几分……咬定青山不放松……最后，祝考好！……（掌声）”</h2>
+  <button onclick="syntax()">点我</button>
+  <p id="words">点它⬆️</p>
+  <h1>水平千古 无上光荣！</h1>
+  <h3>须知</h3>
+	<p>谨以此网站，献给工作室里日日夜夜辛勤劳作的柳校长，纪念一段在我们物理学习生涯中不可磨灭的记忆</p>
+  <p color="red">beta版本非最终版本</p>
+</body>
+<script>
+  var i = 0;
+  function rNum(minNum,maxNum){ 
+    switch(arguments.length){ 
+        case 1: 
+            return parseInt(Math.random()*minNum+1,10); 
+        break; 
+        case 2: 
+            return parseInt(Math.random()*(maxNum-minNum+1)+minNum,10); 
+        break; 
+            default: 
+                return 0; 
+            break; 
+    } 
+} 
+function word1() {
+generate("1")
+}
+function word2() {
+  generate("2")
+}
+function word3() {
+  generate("3")
+}
+		function generate(var1) {
+      document.getElementById("words").innerHTML=var1;
     }
-  </script>
+    function syntax() {
+			i = rNum(0,2);
+      switch(i) {
+        case 0:
+        	word1();
+          break;
+        case 1:
+        	word2();
+          break;
+        case 2:
+        	word3();
+          break;
+        default:
+        	errer();
+          break;
+      }
+    }
+</script>
+
 </html>
