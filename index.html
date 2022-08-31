@@ -2,85 +2,13 @@
 <html>
 
 <head>
-  <title>纪念•永远的柳老师</title>
+  <title>InterWorld</title>
   <meta charset="utf-8">
 </head>
 
 <body>
-  <h1>柳老师哲言生成器(Beta)</h1>
-  <h2>“……最后，不管是基础中等的，还是差的，你们都要记住，还有一年半的时间，基础一定可以赶上来的！……还有，考试的时候，不要抄，没用的。不要想着去用抄的方法，改变那几分……咬定青山不放松……最后，祝考好！……（掌声）”</h2>
-  <button onclick="syntax()">点我</button>
-  <div><p id="words">点它⬆️</p></div>
-  <h1>水平千古 无上光荣！</h1>
-  <h3>须知</h3>
-	<p>虽然柳老师离开了我们，但是他的金句永远不会消失。希望这些金句能够时刻提醒我们柳老师的教诲</p>
-	<p>谨以此网站，献给工作室里日日夜夜辛勤劳作的柳校长，纪念一段在我们物理学习生涯中不可磨灭的记忆</p>
-  <p color="red">beta版本非最终版本</p>
+  <h1>InterWorld</h1>
+  <h2>一个有想法的网站</h2>
 </body>
-<script>
-  var i = 0;
-  var lib_1 = ["万健涵","北极熊母子","机械臂","教科书"];
-  var lib_2 = ["教养","素质","家教"];
-  var lib_3 = ["你蛮差","你差得很","你们都是垃圾","你们蛮垃圾","我瞧不起你","我瞧不起你的家长"];
-  function rNum(minNum,maxNum){ 
-    switch(arguments.length){ 
-        case 1: 
-            return parseInt(Math.random()*minNum+1,10); 
-        break; 
-        case 2: 
-            return parseInt(Math.random()*(maxNum-minNum+1)+minNum,10); 
-        break; 
-            default: 
-                return 0; 
-            break; 
-    } 
-} 
-function word1() {
-generate(lib_1[rNum(0,3)]+"的"+lib_2[rNum(0,2)]+"呀，那都是"+lib_1[rNum(0,3)]+"的十几倍!");
-}
-function word2() {
-  generate("那些抄别人作业的呀,好同学的又不敢抄，就"+lib_1[rNum(0,3)]+"的互相抄，我跟你说"+lib_3[rNum(0,5)]+"!");
-}
-function word3() {
-  generate("你知不知道"+lib_3[rNum(0,5)]+"!");
-}
-		function generate(var1) {
-      document.getElementById("words").innerHTML=var1;
-    }
-    function syntax() {
-			i = rNum(0,2);
-      switch(i) {
-        case 0:
-        	word1();
-          break;
-        case 1:
-        	word2();
-          break;
-        case 2:
-        	word3();
-          break;
-        default:
-        	errer();
-          break;
-      }
-    }
-/*function copyToClipboard(s) {
-            if (window.clipboardData) {
-                window.clipboardData.setData('text', s);
-            } else {
-                (function(s) {
-                    document.oncopy = function(e) {
-                        e.clipboardData.setData('text', s);
-                        e.preventDefault();
-                        document.oncopy = null;
-                    }
-                })(s);
-                document.execCommand('copy');
-            }
-			alert("ok")
-        }*/
-</script>
-<style>
-div{width:700px;height:50px;border:1px solid #000}
-</style>
+
 </html>
