@@ -1,0 +1,37 @@
+@keyframes in1 {
+	0% {
+		left: -10em;
+	}
+	100% {
+		left: 0em;
+	}
+}
+
+@keyframes in2 {
+	0% {
+		left: -10em;
+	}
+	50% {
+		left: -10em;
+	}
+	100% {
+		left: 0em;
+	}
+}
+
+
+
+#maintitle {
+	font-size: 10em;
+	font-family: Fantasy;
+	color: antiquewhite;
+	position: relative;
+	animation-name: in1;
+	animation-duration: 2s;
+}
+
+#subtitle {
+	position: relative;
+	animation-name: in2;
+	animation-duration: 2s;
+}
