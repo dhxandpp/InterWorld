@@ -1,6 +1,10 @@
+body {
+	background-color: #182229;
+}
+
 @keyframes in1 {
 	0% {
-		left: -10em;
+		left: -5em;
 	}
 	100% {
 		left: 0em;
@@ -19,19 +23,22 @@
 	}
 }
 
-
-
 #maintitle {
-	font-size: 10em;
+	font-size: 5em;
 	font-family: Fantasy;
-	color: antiquewhite;
+	color: #b4deff;
 	position: relative;
 	animation-name: in1;
 	animation-duration: 2s;
 }
 
 #subtitle {
+	color: #ffffff;
 	position: relative;
 	animation-name: in2;
 	animation-duration: 2s;
+}
+
+.welcome {
+	background-color: #6666a5;
 }
