@@ -10,16 +10,10 @@
 		<link rel="stylesheet" type="text/css" href="buy.css">
 		<title>购买</title>
 		<script>
-			function confirm() {
-			    sessionStorage.name = "girl"
-				location.href = "/buy/pay.html"
-			}
+			document.getElementById("pic").src = "../gw/" + sessionStorage.name + ".png"
 		</script>
 	</head>
 	<body>
-		<h1 id="maintitle">少女狗蛙</h1>
-		<h2 id="subtitle">49<i class="fa fa-bitcoin" style="font-size:36px;color: white;"></i></h2>
-		<img src="../gw/girl.png">
-		<br><button onclick="confirm()">确定付款</button>
+		<img id="pic">
 	</body>
 </html>

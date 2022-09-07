@@ -17,6 +17,27 @@
 			function toTrade() {
 				location.href = "trade.html"
 			}
+
+			function clickCounter() {
+				if (typeof(Storage) !== "undefined") {
+					if (localStorage.clickcount) {
+						localStorage.clickcount = Number(localStorage.clickcount) + 1;
+					} else {
+						localStorage.clickcount = 1;
+					}
+					document.getElementById("money").innerHTML = "余额： " + localStorage.clickcount +
+						"<i class='fa fa-bitcoin' style='font-size:36px;color: white;'></i>";
+				} else {
+					document.getElementById("money").innerHTML = "Sorry, your browser does not support web storage...";
+				}
+			}
+			if (typeof(Storage) !== "undefined") {
+				if (sessionStorage.name) {
+					sessionStorage.name = "";
+				} else {
+					sessionStorage.name = "";
+				}
+			}
 		</script>
 	</head>
 	<body>
@@ -47,5 +68,8 @@
 		<span class="badge bg-warning">待完善</span>
 		<br>
 		<button type="button" class="btn btn-outline-warning" onclick="toTrade()">地下狗蛙交易市场</button>
+		<br>
+		<button type="button" class="btn btn-outline-warning" onclick="clickCounter()">点我!</button>
+		<p style="color: white;size: 36px;" id="money"></p>
 	</body>
 </html>

@@ -9,10 +9,17 @@
 		<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 		<link rel="stylesheet" type="text/css" href="buy.css">
 		<title>购买</title>
+		<script>
+			function confirm() {
+			    sessionStorage.name = "original"
+				location.href = "/buy/pay.html"
+			}
+		</script>
 	</head>
 	<body>
 		<h1 id="maintitle">原汁原味</h1>
 		<h2 id="subtitle">断货</h2>
 		<img src="../gw/original.png">
+		<br><button onclick="confirm()">确定付款</button>
 	</body>
 </html>
