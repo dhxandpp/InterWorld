@@ -9,11 +9,19 @@
 		<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 		<link rel="stylesheet" type="text/css" href="buy.css">
 		<title>购买</title>
-		<script>
-			document.getElementById("pic").src = "../gw/" + sessionStorage.name + ".png"
-		</script>
 	</head>
+	<h1 id="maintitle"></h1>
+	<h2 id="subtitle"></h2>
 	<body>
 		<img id="pic">
+		<button onclick="home()">返回</button>
 	</body>
+	<script>
+		function home() {
+			location.href = "/"
+		}
+		document.getElementById("pic").src = "../gw/" + sessionStorage.name + ".png"
+		document.getElementById("maintitle").innerHTML = "获取了一只" + sessionStorage.cname
+		document.getElementById("maintitle").innerHTML = "-" + sessionStorage.billinfo +"<i class='fa fa-bitcoin' style='font-size:36px;color: white;'></i>";
+	</script>
 </html>

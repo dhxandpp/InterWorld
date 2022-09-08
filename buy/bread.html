@@ -10,9 +10,17 @@
 		<link rel="stylesheet" type="text/css" href="buy.css">
 		<title>购买</title>
 		<script>
+			sessionStorage.billinfo = 20
 			function confirm() {
-			    sessionStorage.name = "bread"
-				location.href = "/buy/pay.html"
+				if (localStorage.clickcount >= sessionStorage.billinfo) {
+					sessionStorage.name = "bread"
+					sessionStorage.cname = "狗蛙面包"
+					localStorage.clickcount -= sessionStorage.billinfo
+					location.href = "/InterWorld/buy/pay.html"
+				} else {
+					alert("余额不足")
+				}
+			    
 			}
 		</script>
 	</head>
