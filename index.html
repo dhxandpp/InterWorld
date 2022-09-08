@@ -64,8 +64,6 @@
 				}
 				if (localStorage.isBuy) {//是否买密码
 					localStorage.isBuy = 0;
-				} else {
-					localStorage.isBuy = 0;
 				}
 			}
 		</script>
@@ -104,6 +102,7 @@
 		<button type="button" class="btn btn-outline-success"onclick="roll()">抽奖</button><p id="price"></p>
 		<button type="button" class="btn btn-outline-primary" onclick="toTerminal()">控制台<i class="fa fa-cog"></i></button>
 		<input id="password" placeholder="密码"/>
+		<p id="psd"></p>
 		<script>
 			document.getElementById("money").innerHTML = "余额： " + localStorage.clickcount +
 				"<i class='fa fa-bitcoin' style='color: white;'></i>";
