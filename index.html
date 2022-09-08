@@ -62,6 +62,11 @@
 				} else {
 					sessionStorage.billinfo = 0;
 				}
+				if (localStorage.isBuy) {//是否买密码
+					localStorage.isBuy = 0;
+				} else {
+					localStorage.isBuy = 0;
+				}
 			}
 		</script>
 	</head>
@@ -102,6 +107,9 @@
 		<script>
 			document.getElementById("money").innerHTML = "余额： " + localStorage.clickcount +
 				"<i class='fa fa-bitcoin' style='color: white;'></i>";
+			if (localStorage.isBuy == 1) {
+				document.getElementById("psd").innerHTML = "密码:Capitalism will DIE!"
+			}
 		</script>
 	</body>
 </html>
