@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Terminal</title>
+		<script>
+			function run() {
+				command = document.getElementById("ter").value
+				document.getElementById("output").innerHTML = eval(command)
+			}
+		</script>
+		<style>
+			body {
+				background-color: black;
+			}
+			p {
+				color: green;
+				font-family: 'Courier New', Courier, monospace;
+			}
+			input {
+				background-color: gray;
+			}
+			button {
+				background-color: darkslategray;
+			}
+		</style>
+	</head>
+	<body>
+		<input id="ter"/>
+		<button onclick="run()">run</button><p id="output"></p>
+		<p>sessionStorage</p>
+		<p>cilckcount</p>
+		<p>localStorage</p>
+	</body>
+</html>
