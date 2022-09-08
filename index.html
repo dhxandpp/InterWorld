@@ -17,11 +17,13 @@
 			function toTrade() {
 				location.href = "trade.html"
 			}
-
+			function toMine() {
+				location.href = "mine.html"
+			}
 			function clickCounter() {
 				if (typeof(Storage) !== "undefined") {
 					if (localStorage.clickcount) {
-						localStorage.clickcount = Number(localStorage.clickcount) + 1;
+						localStorage.clickcount = Number(localStorage.clickcount) + 0.5;
 					} else {
 						localStorage.clickcount = 1;
 					}
