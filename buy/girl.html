@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1.0, user-scalable=0;">
+		<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1.0, user-scalable=0,">
 		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
 		<script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"></script>
 		<script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
@@ -12,7 +12,7 @@
 		<script>
 			sessionStorage.billinfo = 49
 			function confirm() {
-				if (localStorage.clickcount >= sessionStorage.billinfo) {
+				if (Number(localStorage.clickcount) >= Number(sessionStorage.billinfo)) {
 					sessionStorage.name = "girl"
 					sessionStorage.cname = "少女狗蛙"
 					localStorage.clickcount -= sessionStorage.billinfo
@@ -26,7 +26,7 @@
 	<body>
 		<h1 id="maintitle">少女狗蛙</h1>
 		<h2 id="subtitle">49<i class="fa fa-bitcoin" style="font-size:36px;color: white;"></i></h2>
-		<img src="../gw/girl.png">
+		<div><img src="../gw/girl.png"></div>
 		<br><button onclick="confirm()">确定付款</button>
 	</body>
 </html>
