@@ -16,6 +16,7 @@
 					sessionStorage.name = "original"
 					sessionStorage.cname = "原汁原味"
 					localStorage.clickcount -= sessionStorage.billinfo
+					localStorage.have = localStorage.have.concat("o")
 					location.href = "buy/pay.html"
 				} else {
 					alert("余额不足")
